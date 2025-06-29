@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import authService from './appwriteServices/authServices'
 import { login , logout} from "./store/authSlice";
 import {Footer, Header, Loading} from './components'
+import { Outlet } from "react-router-dom";
 
 
 const App = () => {
@@ -36,9 +37,9 @@ const App = () => {
       <div className="w-full block">
         <Header />
         <main>
-          {/* {Outlate} */}
+          <Outlet />
         </main>
-        <Footer />
+        {/* <Footer /> */}
       </div>
     </div>
     </>
