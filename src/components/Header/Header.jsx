@@ -50,6 +50,7 @@ const Header = () => {
             {navItems.map((item) =>
               item.isActive ? (
                 <NavLink
+                key={item.slug}
                   className={({ isActive }) =>
                     [
                       "px-6 py-2 rounded-md text-sm font-semibold transition-colors",

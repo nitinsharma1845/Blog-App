@@ -5,6 +5,11 @@ import Logo from "./Logo";
 import Container from './container/Container'
 import LogoutBtn from "./Header/LogoutBtn";
 import Button from "./Button";
+import Input from "./Input";
+import SelectBtn from "./SelectBtn";
+import PostCard from "./PostCard";
+import Login from "./Login";
+import Signup from "./Signup";
 
 
 export {
@@ -15,4 +20,9 @@ export {
     Container, 
     LogoutBtn,
     Button,
+    Input, 
+    SelectBtn,
+    PostCard ,
+    Login,
+    Signup
 }

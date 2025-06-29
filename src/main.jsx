@@ -29,7 +29,7 @@ const router = createBrowserRouter([
         element : <AddPost />
       },
       {
-        path : '/all-post',
+        path : '/all-posts',
         element : <AllPost />
       },
       {

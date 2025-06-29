@@ -42,3 +42,8 @@ export class FileServices {
     }
   }
 }
+
+
+const fileServices = new FileServices()
+
+export default fileServices
