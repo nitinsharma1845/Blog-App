@@ -4,6 +4,7 @@ import Loading from "./Loading";
 import Logo from "./Logo";
 import Container from './container/Container'
 import LogoutBtn from "./Header/LogoutBtn";
+import Button from "./Button";
 
 
 export {
@@ -12,5 +13,6 @@ export {
     Loading , 
     Logo,
     Container, 
-    LogoutBtn
+    LogoutBtn,
+    Button,
 }

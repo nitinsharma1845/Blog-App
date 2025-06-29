@@ -1,7 +1,7 @@
 
 function Logo({width = '100px'}) {
   return (
-    <div>Blog Go</div>
+    <div className="text-2xl font-semibold">Blog Go</div>
   )
 }
 
