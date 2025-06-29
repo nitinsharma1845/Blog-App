@@ -41,7 +41,6 @@ const router = createBrowserRouter([
         element : <Post />
       },
     ]
-
   }
 ])
 
