@@ -69,7 +69,7 @@ const Post = () => {
           <div>
             <h2 className="text-4xl font-semibold my-5 italic">{post.title}</h2>
             <hr />
-            <div className="prose max-w-none my-8 prose ">{parse(post.content)}</div>
+            <div className="prose max-w-none my-8 ">{parse(post.content)}</div>
           </div>
         </div>
         <hr />
