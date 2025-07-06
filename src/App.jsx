@@ -15,7 +15,6 @@ const App = () => {
   useEffect(()=>{
     authService.getCurrentUser()
     .then((userData)=>{
-      // console.log(userData)
       if(userData){
         dispatch(login({status : true , userData : userData}))
       }else{
@@ -28,7 +27,7 @@ const App = () => {
   } , [])
 
   if(loading){
-    return <Loading type="spin" color="purple" />
+    return <Loading type="spin" color="blue" />
   }
   return (
     <>
@@ -39,7 +38,7 @@ const App = () => {
         <main>
           <Outlet />
         </main>
-        {/* <Footer /> */}
+        <Footer />
       </div>
     </div>
     </>

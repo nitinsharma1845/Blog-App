@@ -2,8 +2,7 @@ import { Signup as SignupComponent } from "../components";
 
 const Signup = () => {
   return (
-    <div>
-      Signup
+    <div className="py-20 container">
       <SignupComponent />
     </div>
   );

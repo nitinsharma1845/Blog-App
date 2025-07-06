@@ -6,6 +6,7 @@ import fileServices from "../../appwriteServices/fileServices";
 import { useNavigate } from "react-router-dom";
 import { useSelector } from "react-redux";
 import { toast } from "react-toastify";
+import parse from 'html-react-parser'
 
 const PostForm = ({ post }) => {
   const {
@@ -20,7 +21,7 @@ const PostForm = ({ post }) => {
     mode: onchange,
     defaultValues: {
       title: post?.title || "",
-      slug: post?.slug || "",
+      slug: post?.$id || "",
       content: post?.content || "",
       status: post?.status || "active",
     },
@@ -30,7 +31,6 @@ const PostForm = ({ post }) => {
   const userData = useSelector((state) => state.auth.userData);
 
   const submit = async (data) => {
-    console.log(data);
     const postToast = toast.loading(post ? "Updating post.." : "Posting..");
     try {
       if (post) {
@@ -113,7 +113,7 @@ const PostForm = ({ post }) => {
 
   return (
     <form onSubmit={handleSubmit(submit)} className="flex flex-wrap">
-      <div className="w-2/3 px-2">
+      <div className="md:w-2/3 w-full px-2">
         <Input
           label="Title : "
           placeholder="Title"
@@ -142,7 +142,7 @@ const PostForm = ({ post }) => {
           defaultValues={getValues("content")}
         />
       </div>
-      <div className="w-1/3 px-2">
+      <div className="md:w-1/3 w-full px-2">
         <Input
           type="file"
           label="Featured Image"
@@ -175,7 +175,7 @@ const PostForm = ({ post }) => {
         <Button
           disabled={!isValid || isSubmitting}
           type="submit"
-          bgColor={post ? bg - green - 500 : undefined}
+          bgColor={post ? "bg-green-500" : undefined}
           className={`w-full ${
             !isValid || isSubmitting ? "bg-gray-400 cursor-not-allowed" : ""
           }`}

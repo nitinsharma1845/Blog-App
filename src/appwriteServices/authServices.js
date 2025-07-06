@@ -23,8 +23,6 @@ export class AuthServices {
       );
 
       if (userAccount) {
-        console.log("User Account created ::::::", userAccount);
-        //There is also an improvement for later we can directly login the user after the account creation
         return userAccount;
       } else {
         return userAccount;

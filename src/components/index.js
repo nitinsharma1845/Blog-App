@@ -13,7 +13,8 @@ import Signup from "./Signup";
 import AuthLayout from './AuthLayout'
 import RTE from "./RTE";
 import PostForm from "./PostForm/PostForm";
-
+import HeroSection from "./Herosection";
+import Profile from "./Header/Profile";
 
 export {
     Header ,
@@ -30,5 +31,7 @@ export {
     Signup,
     AuthLayout,
     RTE,
-    PostForm
+    PostForm,
+    HeroSection,
+    Profile
 }

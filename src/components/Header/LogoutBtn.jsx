@@ -2,8 +2,10 @@ import { useDispatch } from "react-redux";
 import authServices from "../../appwriteServices/authServices";
 import { logout } from "../../store/authSlice";
 import { toast } from "react-toastify";
+import { useNavigate } from "react-router-dom";
 const LogoutBtn = () => {
   const dispatch = useDispatch();
+  const navigate = useNavigate()
 
   const logoutHandler = async () => {
     const logoutToast = toast.loading("Logging Out....");
@@ -16,6 +18,7 @@ const LogoutBtn = () => {
           autoClose: 3000,
         });
         dispatch(logout());
+        navigate('/login')
       });
     } catch (error) {
       throw error;
@@ -25,7 +28,7 @@ const LogoutBtn = () => {
   return (
     <button
       onClick={logoutHandler}
-      className="bg-red-500 border-none shadow text-white px-6 py-2 text-sm rounded hover:bg-red-600 cursor-pointer"
+      className="bg-red-500 border-none shadow text-white px-6 py-2 text-sm h-full font-semibold hover:bg-red-600 cursor-pointer"
     >
       Logout
     </button>

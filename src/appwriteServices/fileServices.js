@@ -36,7 +36,7 @@ export class FileServices {
 
   getFilePreview(fileId) {
     try {
-      return this.storage.getFilePreview(envConfig.appwriteBucketId, fileId);
+      return this.storage.getFileView(envConfig.appwriteBucketId, fileId);
     } catch (error) {
       throw error;
     }
