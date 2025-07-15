@@ -15,6 +15,7 @@ import RTE from "./RTE";
 import PostForm from "./PostForm/PostForm";
 import HeroSection from "./Herosection";
 import Profile from "./Header/Profile";
+import MyPosts from "./MyPosts";
 
 export {
     Header ,
@@ -33,5 +34,6 @@ export {
     RTE,
     PostForm,
     HeroSection,
-    Profile
+    Profile,
+    MyPosts
 }

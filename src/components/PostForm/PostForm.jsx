@@ -6,7 +6,7 @@ import fileServices from "../../appwriteServices/fileServices";
 import { useNavigate } from "react-router-dom";
 import { useSelector } from "react-redux";
 import { toast } from "react-toastify";
-import parse from 'html-react-parser'
+// import parse from 'html-react-parser'
 
 const PostForm = ({ post }) => {
   const {

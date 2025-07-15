@@ -32,6 +32,9 @@ const Post = () => {
     getPost();
   }, []);
 
+
+  console.log("Single POst ::::::::;",post)
+
   async function handleDelete(id) {
     const deleteTost = toast.loading("Deleting post...");
     const result = await databaseServices.deletePost(id);
@@ -60,8 +63,9 @@ const Post = () => {
     <div className="py-20 container font-poppins">
       <Container>
         <div className="w-full">
-          <div className="w-full object-cover aspect-3/2 overflow-hidden rounded-xl">
+          <div className="w-full object-cover h-full overflow-hidden rounded-xl">
             <img
+            className="m-auto py-6"
               src={fileServices.getFilePreview(post.featuredImage)}
               alt={post.title}
             />
