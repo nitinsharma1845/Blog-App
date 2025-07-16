@@ -38,10 +38,11 @@ const Signup = () => {
       });
     }
   }
+  
 
   return (
     <div className="flex items-center justify-centerw-full">
-      <div className="mx-auto w-full max-w-lg bg-gray-200 shadow rounded-xl p-10 border border-black/10">
+      <div className="mx-auto w-full max-w-lg bg-gray-200 dark:bg-gray-800 dark:text-gray-200 shadow rounded-xl p-10 border border-black/10">
         <div className="mb-2 flex justify-center">
           <span className="inline-block w-full max-w-[120px]">
             <Logo />
@@ -50,7 +51,7 @@ const Signup = () => {
         <h2 className="text-center text-2xl font-bold">
           Signup to a account
         </h2>
-        <p className="mt-2 text-center text-base text-black/60">
+        <p className="mt-2 text-center text-base text-black/60 dark:text-gray-400">
           Already have a account &nbsp;
           <Link
             to="/login"

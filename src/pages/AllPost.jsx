@@ -27,13 +27,13 @@ const AllPost = () => {
   return (
     <div className="py-20 container">
       <Container>
-        <h1 className="text-3xl font-bold mb-6">All Posts</h1>
+        <h1 className="text-3xl font-bold mb-6 dark:text-gray-200">All Posts</h1>
 
         {loading ? (
           <Loading color="black" />
         ) : posts.length === 0 ? (
-          <div className="text-center text-gray-600">
-            <p className="text-xl font-semibold mb-4">
+          <div className="text-center text-gray-600 dark:text-gray-100">
+            <p className="text-xl font-semibold mb-4 ">
               No posts yet. Be the first to create one!
             </p>
             <button

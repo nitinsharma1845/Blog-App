@@ -33,7 +33,7 @@ const Post = () => {
   }, []);
 
 
-  console.log("Single POst ::::::::;",post)
+  // console.log("Single POst ::::::::;",post)
 
   async function handleDelete(id) {
     const deleteTost = toast.loading("Deleting post...");
@@ -63,20 +63,20 @@ const Post = () => {
     <div className="py-20 container font-poppins">
       <Container>
         <div className="w-full">
-          <div className="w-full object-cover h-full overflow-hidden rounded-xl">
+          <div className="w-full object-cover h-full overflow-hidden">
             <img
-            className="m-auto py-6"
+            className="m-auto py-6 rounded-2xl"
               src={fileServices.getFilePreview(post.featuredImage)}
               alt={post.title}
             />
           </div>
           <div>
-            <h2 className="text-4xl font-semibold my-5 italic">{post.title}</h2>
-            <hr />
-            <div className="prose max-w-none my-8 ">{parse(post.content)}</div>
+            <h2 className="text-4xl font-semibold my-5 italic dark:text-gray-200">{post.title}</h2>
+            <hr className="dark:text-gray-500"/>
+            <div className="prose max-w-none my-8 dark:text-gray-400">{parse(post.content)}</div>
           </div>
         </div>
-        <hr />
+        <hr className="dark:text-gray-500"/>
 
         {isAuthor && (
           <div className="my-8">

@@ -7,15 +7,15 @@ const Profile = () => {
 
   return (
     <>
-      <div className="w-full">
+      <div className="w-full ">
         <div className="md:py-8 py-5 max-auto flex justify-center items-center flex-col">
           <div className="md:w-[100px] md:h-[100px] h-[70px] w-[70px] rounded-full">
-            <RxAvatar width={100} className="font-light w-full h-full" />
+            <RxAvatar width={100} className="font-light w-full h-full dark:text-gray-200" />
           </div>
-          <h1 className="py-3 font-semibold text-xl md:text-3xl">
+          <h1 className="py-3 font-semibold text-xl md:text-3xl dark:text-gray-200">
             {userData.name}
           </h1>
-          <p className="md:text-xl text-lg pb-5 italic">{userData.email}</p>
+          <p className="md:text-xl text-lg pb-5 itali dark:text-gray-300">{userData.email}</p>
 
           <LogoutBtn />
         </div>

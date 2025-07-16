@@ -2,11 +2,8 @@ import { Login as LoginComponent } from "../components";
 
 const Login = () => {
   return (
-    <div className="py-20 container">
-      <div className="md:w-2xl w-[90%] mx-auto">
+    <div className="py-30 container">
       <LoginComponent />
-
-      </div>
     </div>
   );
 };

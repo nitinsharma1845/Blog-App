@@ -16,6 +16,7 @@ import PostForm from "./PostForm/PostForm";
 import HeroSection from "./Herosection";
 import Profile from "./Header/Profile";
 import MyPosts from "./MyPosts";
+import ThemeBtn from "./ThemeBtn";
 
 export {
     Header ,
@@ -35,5 +36,6 @@ export {
     PostForm,
     HeroSection,
     Profile,
-    MyPosts
+    MyPosts,
+    ThemeBtn
 }

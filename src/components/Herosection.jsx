@@ -7,10 +7,10 @@ const HeroSection = () => {
     <section className="my-20 py-10">
       <div className="container mx-auto px-6 flex flex-col-reverse lg:flex-row items-center gap-12">
         <div className="flex-1 text-center lg:text-left">
-          <h1 className="text-2xl md:text-5xl font-extrabold text-gray-800 leading-tight mb-4 font-aldrich">
+          <h1 className="text-2xl md:text-5xl font-extrabold text-gray-800 dark:text-gray-200 leading-tight mb-4 font-aldrich">
             Discover Inspiring Stories<br />and Powerful Insights
           </h1>
-          <p className="text-sm md:text-lg text-gray-600 mb-6">
+          <p className="text-sm md:text-lg text-gray-600 dark:text-gray-400 mb-6">
             Read from a collection of thoughtful blogs across tech, lifestyle, and creativity — written to spark ideas and fuel your curiosity.
           </p>
           <Link
