@@ -21,7 +21,7 @@ const App = () => {
     document.querySelector("html").classList.remove("light", "dark");
     document.querySelector("html").classList.add(themeMode);
     localStorage.setItem("app-theme", themeMode);
-    console.log(themeMode);
+    // console.log(themeMode);
   }, [themeMode]);
 
   useEffect(() => {

@@ -6,6 +6,7 @@ import { useSelector } from "react-redux";
 import { Container, Loading, Button } from "../components";
 import parse from "html-react-parser";
 import { toast } from "react-toastify";
+import { formatDistanceToNow } from "date-fns";
 
 const Post = () => {
   const [post, setPost] = useState(null);
@@ -31,7 +32,6 @@ const Post = () => {
 
     getPost();
   }, []);
-
 
   // console.log("Single POst ::::::::;",post)
 
@@ -65,18 +65,29 @@ const Post = () => {
         <div className="w-full">
           <div className="w-full object-cover h-full overflow-hidden">
             <img
-            className="m-auto py-6 rounded-2xl"
+              className="m-auto py-6 rounded-2xl"
               src={fileServices.getFilePreview(post.featuredImage)}
               alt={post.title}
             />
           </div>
           <div>
-            <h2 className="text-4xl font-semibold my-5 italic dark:text-gray-200">{post.title}</h2>
-            <hr className="dark:text-gray-500"/>
-            <div className="prose max-w-none my-8 dark:text-gray-400">{parse(post.content)}</div>
+            <div className="md:flex items-end justify-between ">
+              <h2 className="text-4xl font-semibold my-5 italic dark:text-gray-200">
+                {post.title}
+              </h2>
+              <p className="md:text-xs text-[10px] pb-2 text-gray-700 font-semibold dark:text-gray-200">
+                Updated at : {formatDistanceToNow(new Date(post.$updatedAt), {
+                  addSuffix: true,
+                })}
+              </p>
+            </div>
+            <hr className="dark:text-gray-500" />
+            <div className="prose max-w-none my-8 dark:prose-invert">
+              {parse(post.content)}
+            </div>
           </div>
         </div>
-        <hr className="dark:text-gray-500"/>
+        <hr className="dark:text-gray-500" />
 
         {isAuthor && (
           <div className="my-8">
